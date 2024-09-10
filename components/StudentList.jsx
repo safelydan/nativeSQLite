@@ -52,19 +52,19 @@ const StudentList = () => {
       <View style={styles.form}>
         <TextInput
           style={styles.input}
-          placeholder="First Name"
+          placeholder="Primeiro Nome"
           value={newStudent.FirstName}
           onChangeText={(text) => handleInputChange("FirstName", text)}
         />
         <TextInput
           style={styles.input}
-          placeholder="Last Name"
+          placeholder="Sobrenome"
           value={newStudent.LastName}
           onChangeText={(text) => handleInputChange("LastName", text)}
         />
         <TextInput
           style={styles.input}
-          placeholder="Age"
+          placeholder="Idade"
           value={newStudent.Age}
           keyboardType="numeric"
           onChangeText={(text) => handleInputChange("Age", text)}
@@ -75,7 +75,7 @@ const StudentList = () => {
           value={newStudent.Email}
           onChangeText={(text) => handleInputChange("Email", text)}
         />
-        <Button title="Add Student" onPress={handleAddStudent} />
+        <Button title="Adicionar estudante" onPress={handleAddStudent} />
       </View>
 
       {students.length === 0 ? (
