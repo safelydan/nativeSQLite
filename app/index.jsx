@@ -17,9 +17,9 @@ async function initializeDatabase(db) {
         Email TEXT
       )
     `);
-    console.log("La base de datos se inicializo correctamente");
+    console.log("O banco de dados se inicializou corretamente");
   } catch (error) {
-    console.log("Error al inicializar la base de datos: ", error);
+    console.log("Erro ao inicializar o banco de dados: ", error);
   }
 } 
 
