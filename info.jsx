@@ -29,9 +29,9 @@ async function initializeDatabase(db) {
 
 export default function App() {
   return (
-    <SQLiteProvider databaseName="mydb.db" onInit={initializeDatabase}>
+    <SQLiteProvider databaseName="mydb2.db" onInit={initializeDatabase}>
       <View style={styles.container}>
-        <Text style={styles.title}>Lista de estudiantes</Text>
+        <Text style={styles.title}>Lista de estudantes</Text>
         <Content />
         <StatusBar style="auto" />
       </View>

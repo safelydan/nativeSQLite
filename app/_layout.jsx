@@ -9,7 +9,7 @@ export default function Layout() {
           name="index" // This is the name of the page and must match the url from root
           options={{
             drawerLabel: 'Listado',
-            title: 'Lista de estudiantes',
+            title: 'Lista de estutdantes',
           }}
         />
       </Drawer>
