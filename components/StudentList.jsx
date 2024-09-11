@@ -10,8 +10,8 @@ import {
   Button,
   View,
 } from "react-native";
-import useStudentsService from "../services/studentsServices";
-import CardStudent from './CardStudent';
+import useStudentsService from "../controller/studentController";
+import CardStudent from './Students';
 
 const StudentList = () => {
   const { getStudents, addStudent, deleteStudents } = useStudentsService();
