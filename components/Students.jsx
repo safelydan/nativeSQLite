@@ -1,12 +1,7 @@
 import React from "react";
-import {
-    Text,
-    Pressable,
-    StyleSheet,
-    View,
-  } from "react-native";
+import { Text, Pressable, StyleSheet, View } from "react-native";
 
-const CardStudent = ({item}) => {
+const CardStudent = ({ item }) => {
   return (
     <Pressable
       style={({ pressed }) => [
@@ -25,8 +20,8 @@ const CardStudent = ({item}) => {
           </Text>
           <Text style={styles.textDescription}>{item.Email}</Text>
         </View>
-        <View style={{ position: "absolute", right: 30 }}>
-          <Text style={{ color: "#0e7490", fontSize: 25 }}>{item.Age}</Text>
+        <View style={styles.ageContainer}>
+          <Text style={styles.ageText}>{item.Age}</Text>
         </View>
       </View>
     </Pressable>
@@ -34,35 +29,54 @@ const CardStudent = ({item}) => {
 };
 
 const styles = StyleSheet.create({
-    card: {
-      flex: 1,
-      backgroundColor: "#e2e8f0",
-      padding: 20,
-      margin: 10,
-      borderRadius: 10,
-      flexDirection: "row",
-      alignItems: "center",
-    },
-    textTitle: {
-      fontSize: 20,
-    },
-    textDescription: {
-      fontSize: 15,
-    },
-    textIndex: {
-      fontSize: 20,
-      color: "white",
-    },
-    boxIndex: {
-      flex: 1,
-      maxWidth: 40,
-      height: 40,
-      backgroundColor: "#0e7490",
-      justifyContent: "center",
-      borderRadius: 100,
-      alignItems: "center",
-      marginRight: 20,
-    },
-  });
+  card: {
+    flex: 1,
+    backgroundColor: "#fff",
+    padding: 20,
+    marginVertical: 10,
+    borderRadius: 12,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  textTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#333", // Tom mais escuro para o nome
+    marginBottom: 4,
+  },
+  textDescription: {
+    fontSize: 14,
+    color: "#777", // Cor mais sutil para o email
+  },
+  textIndex: {
+    fontSize: 16,
+    color: "white",
+    fontWeight: "bold",
+  },
+  boxIndex: {
+    flex: 1,
+    maxWidth: 40,
+    height: 40,
+    backgroundColor: "#0e7490",
+    justifyContent: "center",
+    borderRadius: 100,
+    alignItems: "center",
+    marginRight: 20,
+  },
+  ageContainer: {
+    position: "absolute",
+    right: 20,
+    backgroundColor: "#0e7490",
+    padding: 10,
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  ageText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+});
 
 export default CardStudent;

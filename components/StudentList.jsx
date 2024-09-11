@@ -75,7 +75,10 @@ const StudentList = () => {
           value={newStudent.Email}
           onChangeText={(text) => handleInputChange("Email", text)}
         />
-        <Button title="Adicionar estudante" onPress={handleAddStudent} />
+        <Pressable style={styles.buttonContainer} onPress={handleAddStudent}>
+  <Text style={styles.buttonText}>Adicionar estudante</Text>
+</Pressable>
+
       </View>
 
       {students.length === 0 ? (
@@ -97,17 +100,36 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    backgroundColor: "#f4f4f9", // Cor de fundo clara para o container
   },
   form: {
-    marginBottom: 16,
+    marginBottom: 20,
+    padding: 16,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+
   },
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
-    padding: 8,
-    marginBottom: 8,
-    borderRadius: 4,
+    padding: 10,
+    marginBottom: 12,
+    borderRadius: 6,
+    backgroundColor: "#f9f9f9", // Fundo dos inputs levemente mais claro
+    fontSize: 16,
+  },
+  buttonContainer: {
+    backgroundColor: "#0e7490",
+    borderRadius: 8,
+    paddingVertical: 12,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
+
 
 export default StudentList;

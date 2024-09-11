@@ -25,7 +25,7 @@ async function initializeDatabase(db) {
 
 export default function Index() {
   return (
-    <SQLiteProvider databaseName="mydb2.db" onInit={initializeDatabase}>
+    <SQLiteProvider databaseName="mydb4.db" onInit={initializeDatabase}>
       <View style={styles.container}>
         <StudentList />
         <StatusBar style="auto" />
