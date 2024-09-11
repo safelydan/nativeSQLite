@@ -10,11 +10,11 @@ import {
   Button,
   View,
 } from "react-native";
-import useStudentsService from "../controller/studentController";
+import useStudentsController from "../controller/studentController";
 import CardStudent from './Students';
 
 const StudentList = () => {
-  const { getStudents, addStudent, deleteStudents } = useStudentsService();
+  const { getStudents, addStudent, deleteStudents } = useStudentsController();
   const [students, setStudents] = useState([]);
   const [newStudent, setNewStudent] = useState({
     FirstName: "",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#f4f4f9", // Cor de fundo clara para o container
+    backgroundColor: "#f4f4f9", 
   },
   form: {
     marginBottom: 20,
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginBottom: 12,
     borderRadius: 6,
-    backgroundColor: "#f9f9f9", // Fundo dos inputs levemente mais claro
+    backgroundColor: "#f9f9f9", 
     fontSize: 16,
   },
   buttonContainer: {

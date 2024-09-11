@@ -41,12 +41,12 @@ const styles = StyleSheet.create({
   textTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333", // Tom mais escuro para o nome
+    color: "#333", 
     marginBottom: 4,
   },
   textDescription: {
     fontSize: 14,
-    color: "#777", // Cor mais sutil para o email
+    color: "#777", 
   },
   textIndex: {
     fontSize: 16,

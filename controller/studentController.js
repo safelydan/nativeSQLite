@@ -1,7 +1,7 @@
 // services/studentService.js
 import { useSQLiteContext } from "expo-sqlite";
 
-const useStudentsService = () => {
+const useStudentsController = () => {
   const db = useSQLiteContext();
 
   const getStudents = async () => {
@@ -47,4 +47,4 @@ const useStudentsService = () => {
   };
 };
 
-export default useStudentsService;
+export default useStudentsController;
