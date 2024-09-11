@@ -35,7 +35,7 @@ const useStudentsService = () => {
     try {
       const statement = await db.runAsync("DELETE FROM Students");
     } catch (error) {
-      console.log("Erro ao deletear um estudante: ", error);
+      console.log("Erro ao deletar um estudante: ", error);
       throw error;
     }
   };
