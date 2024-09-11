@@ -9,7 +9,7 @@ const useStudentsService = () => {
       const allStudent = await db.getAllAsync("SELECT * FROM Students");
       return allStudent;
     } catch (error) {
-      console.log("Error al hacer el get: ", error);
+      console.log("Erro ao fazer o get: ", error);
       throw error;
     }
   };
@@ -26,7 +26,7 @@ const useStudentsService = () => {
         newStudent.Email,
       ]);
     } catch (error) {
-      console.log("Error al crear un estudiante: ", error);
+      console.log("Erro ao criar um estudiante: ", error);
       throw error;
     }
   };
@@ -35,7 +35,7 @@ const useStudentsService = () => {
     try {
       const statement = await db.runAsync("DELETE FROM Students");
     } catch (error) {
-      console.log("Error al borrar los estudiantes: ", error);
+      console.log("Erro ao deletear um estudante: ", error);
       throw error;
     }
   };
