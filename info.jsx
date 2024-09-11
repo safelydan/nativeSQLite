@@ -40,47 +40,6 @@ export default function App() {
 }
 
 const Content = () => {
-  const db = useSQLiteContext();
-
-  const [students, setStudents] = useState([]);
-
-  //function to get the students
-  const getStudents = async () => {
-    try {
-      const allStudent = await db.getAllAsync("SELECT * FROM Students");
-      setStudents(allStudent);
-    } catch (error) {
-      console.log("Error al hacer el get: ", error);
-    }
-  };
-
-  //function to add a student
-  const addStudent = async (newStudent) => {
-    try {
-      const statement = await db.prepareAsync(
-        "INSERT INTO Students (FirstName, LastName, Age, Email) VALUES (?,?,?,?)"
-      );
-      await statement.executeAsync([
-        newStudent.FirstName,
-        newStudent.LastName, 
-        newStudent.Age, 
-        newStudent.Email,
-      ]);
-      await getStudents();
-    } catch (error) {
-      console.log("Error al crear un estudiante: ", error);
-    }
-  };
-
-  useEffect(() => {
-    addStudent({
-      FirstName: "Kevin",
-      LastName: "Sanchez",
-      Age: '24',
-      Email: "lordkevin@gmail.com",
-    });
-    getStudents();
-  }, []);
 
   return (
     <View>
